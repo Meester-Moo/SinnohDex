@@ -3,13 +3,26 @@ window.onload = function() {
     let pokemon = [
         ["pokemon/turtwig.png", "Turtwig", "Level up (lvl. 18)"],
         ["pokemon/grotle.png", "Grotle", "Level up (lvl. 32)"],
-        ["pokemon/torterra.png", "Torterra", "Fully Evolved"]
+        ["pokemon/torterra.png", "Torterra", "Fully Evolved"],
+        ["pokemon/chimchar.png", "Chimchar", "Level up (lvl. 14)"],
+        ["pokemon/monferno.png", "Monferno", "Level up (lvl. 36)"],
+        ["pokemon/infernape.png", "Infernape", "Fully Evolved"],
+        ["pokemon/piplup.png", "Piplup", "Level up (lvl. 16)"],
+        ["pokemon/prinplup.png", "Prinplup", "Level up (lvl. 36)"],
+        ["pokemon/empoleon.png", "Empoleon", "Fully Evolved"]
     ]
 
     let pokemonTypes = [
         ["Grass", ""],
         ["Grass", ""],
-        ["Grass", "Ground"]
+        ["Grass", "Ground"],
+        ["Fire", ""],
+        ["Fire", "Fighting"],
+        ["Fire", "Fighting"],
+        ["Water", ""],
+        ["Water", ""],
+        ["Water", "Steel"]
+
     ]
 
     //Creates table element and associates it with the poketable table in the HTML
@@ -88,3 +101,5 @@ window.onload = function() {
 
 //TODO: Add Chimchar and Piplup line
 //TODO: Figure out how to add CSS to specific types
+//TODO: Add pokedex entry numbers
+//TODO: Figure out how to add colspan to entries that only have one type
