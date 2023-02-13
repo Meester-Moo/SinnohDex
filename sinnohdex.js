@@ -1,9 +1,9 @@
 window.onload = function() {
     
     let pokemon = [
-        ["turtwig.png", "Turtwig", "Level up (lvl. 18)"],
-        ["grotle.png", "Grotle", "Level up (lvl. 32)"],
-        ["torterra.png", "Torterra", "Fully Evolved"]
+        ["pokemon/turtwig.png", "Turtwig", "Level up (lvl. 18)"],
+        ["pokemon/grotle.png", "Grotle", "Level up (lvl. 32)"],
+        ["pokemon/torterra.png", "Torterra", "Fully Evolved"]
     ]
 
     let pokemonTypes = [
