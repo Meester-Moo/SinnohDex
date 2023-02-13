@@ -3,10 +3,18 @@ td {
 }
 
 table {
-    border: 1px solid red;
+    border: 1px solid black;
     border-collapse: collapse;
 }
 
 img {
     max-width: 100px;
+}
+header {
+    display: inline;
+    font-size: 48px;
+    font-weight: bold;
+}
+td {
+    font-size: 20px;
 }
