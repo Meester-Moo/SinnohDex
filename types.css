@@ -1,6 +1,24 @@
 .typeGrass {
     color: green;
+    text-align: center;
 }
 .typeGround {
     color: brown;
+    text-align: center;
+}
+.typeFire {
+    color: red;
+    text-align: center;
+}
+.typeWater {
+    color: blue;
+    text-align: center;
+}
+.typeFighting {
+    color: orange;
+    text-align: center;
+}
+.typeSteel {
+    color: slategrey;
+    text-align: center;
 }

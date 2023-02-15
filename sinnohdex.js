@@ -101,13 +101,37 @@ window.onload = function() {
             table.appendChild(tr);
             console.log("One type branch");
             
-            //tests for type to apply CSS coloring
+            // tests for type to apply CSS coloring
+            switch(pokemonTypes[i][0]) {
+                case "Grass":
+                    type1Td.setAttribute("class", "typeGrass");
+                    break;
 
-            if (pokemonTypes[i][0] == "Grass") {
-            type1Td.setAttribute("class", "typeGrass");
-            // "class", "oneType", assign an object to oneType and typeGrass
+                case "Fire":
+                    type1Td.setAttribute("class", "typeFire");
+                    break;
+                
+                case "Water":
+                    type1Td.setAttribute("class", "typeWater");
+                    break;
+                
+                case "Ground":
+                    type1Td.setAttribute("class", "typeGround");
+                    break;
 
-            }
+                case "Fighting":
+                    type1Td.setAttribute("class", "typeFighting");
+                    break;
+                
+                case "Steel":
+                    type1Td.setAttribute("class", "typeSteel");
+                    break;
+                    
+
+                default:
+                  // code block
+              } 
+           
 
         }
         //Branch if the pokemon has two types
@@ -134,10 +158,64 @@ window.onload = function() {
             console.log("Two types branch");
             //tests for type to apply CSS coloring
 
-            if (pokemonTypes[i][0] == "Grass") {
-                type1Td.setAttribute("class", "typeGrass");
+            switch(pokemonTypes[i][0]) {
+                case "Grass":
+                    type1Td.setAttribute("class", "typeGrass");
+                    break;
 
-            }
+                case "Fire":
+                    type1Td.setAttribute("class", "typeFire");
+                    break;
+                
+                case "Water":
+                    type1Td.setAttribute("class", "typeWater");
+                    break;
+
+                case "Ground":
+                    type1Td.setAttribute("class", "typeGround");
+                    break;
+
+                case "Fighting":
+                    type1Td.setAttribute("class", "typeFighting");
+                    break;
+
+                case "Steel":
+                    type1Td.setAttribute("class", "typeSteel");
+                    break;
+
+                default:
+                  // code block
+              } 
+            switch(pokemonTypes[i][1]) {
+                case "Grass":
+                    type2Td.setAttribute("class", "typeGrass");
+                    break;
+
+                case "Fire":
+                    type2Td.setAttribute("class", "typeFire");
+                    break;
+                
+                case "Water":
+                    type2Td.setAttribute("class", "typeWater");
+                    break;
+
+                case "Ground":
+                    type2Td.setAttribute("class", "typeGround");
+                    break;
+    
+                case "Fighting":
+                    type2Td.setAttribute("class", "typeFighting");
+                    break;
+
+                case "Steel":
+                    type2Td.setAttribute("class", "typeSteel");
+                break;
+
+                default:
+                  // code block
+              } 
+
+
         }
 
 
