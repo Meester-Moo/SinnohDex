@@ -22,3 +22,11 @@
     color: slategrey;
     text-align: center;
 }
+.typeNormal {
+    color: dimgray;
+    text-align: center;
+}
+.typeBug {
+    color:yellowgreen;
+    text-align: center;
+}

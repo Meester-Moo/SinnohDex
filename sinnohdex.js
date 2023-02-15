@@ -9,7 +9,14 @@ window.onload = function() {
         ["pokemon/infernape.png", "Infernape", "Fully Evolved"],
         ["pokemon/piplup.png", "Piplup", "Level up (lvl. 16)"],
         ["pokemon/prinplup.png", "Prinplup", "Level up (lvl. 36)"],
-        ["pokemon/empoleon.png", "Empoleon", "Fully Evolved"]
+        ["pokemon/empoleon.png", "Empoleon", "Fully Evolved"],
+        ["pokemon/starly.png", "Starly", "Level up (lvl. 14)"],
+        ["pokemon/staravia.png", "Staravia", "Level up (lvl. 34)"],
+        ["pokemon/staraptor.png", "Staraptor", "Fully Evolved"],
+        ["pokemon/bidoof.png", "Bidoof", "Level up (lvl. 15)"],
+        ["pokemon/bibarel.png", "Bibarel", "Fully Evolved"],
+        ["pokemon/kricketot.png", "Kricketot", "Level up (lvl. 10)"],
+        ["pokemon/kricketune.png", "Kricketune", "Fully Evolved"]
     ]
 
     let pokemonTypes = [
@@ -21,7 +28,15 @@ window.onload = function() {
         ["Fire", "Fighting"],
         ["Water", ""],
         ["Water", ""],
-        ["Water", "Steel"]
+        ["Water", "Steel"],
+        ["Normal", "Flying"],
+        ["Normal", "Flying"],
+        ["Normal", "Flying"],
+        ["Normal", ""],
+        ["Normal", "Water"],
+        ["Bug", ""],
+        ["Bug", ""],
+
 
     ]
 
@@ -54,6 +69,7 @@ window.onload = function() {
 
     //Creates the heading table data element for the Evolution Method column
     let evolveMethodHeadingTd = document.createElement("td");
+    evolveMethodHeadingTd.setAttribute("class", "bold");
     evolveMethodHeadingTd.innerText = "Evolution Method";
     trHeading.appendChild(evolveMethodHeadingTd);
     
@@ -126,7 +142,14 @@ window.onload = function() {
                 case "Steel":
                     type1Td.setAttribute("class", "typeSteel");
                     break;
-                    
+                
+                case "Normal":
+                    type1Td.setAttribute("class", "typeNormal");
+                    break;
+                
+                case "Bug":
+                    type1Td.setAttribute("class", "typeBug");
+                    break;
 
                 default:
                   // code block
@@ -183,6 +206,14 @@ window.onload = function() {
                     type1Td.setAttribute("class", "typeSteel");
                     break;
 
+                case "Normal":
+                    type1Td.setAttribute("class", "typeNormal");
+                    break;
+
+                case "Bug":
+                    type1Td.setAttribute("class", "typeBug");
+                    break;
+
                 default:
                   // code block
               } 
@@ -210,6 +241,14 @@ window.onload = function() {
                 case "Steel":
                     type2Td.setAttribute("class", "typeSteel");
                 break;
+
+                case "Normal":
+                    type2Td.setAttribute("class", "typeNormal");
+                    break;
+
+                case "Bug":
+                    type2Td.setAttribute("class", "typeBug");
+                    break;
 
                 default:
                   // code block
