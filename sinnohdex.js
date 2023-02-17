@@ -1,30 +1,30 @@
 window.onload = function() {
     
     let pokemon = [
-        ["pokemon/turtwig.png", "Turtwig", "Level up (lvl. 18)"],
-        ["pokemon/grotle.png", "Grotle", "Level up (lvl. 32)"],
-        ["pokemon/torterra.png", "Torterra", "Fully Evolved"],
-        ["pokemon/chimchar.png", "Chimchar", "Level up (lvl. 14)"],
-        ["pokemon/monferno.png", "Monferno", "Level up (lvl. 36)"],
-        ["pokemon/infernape.png", "Infernape", "Fully Evolved"],
-        ["pokemon/piplup.png", "Piplup", "Level up (lvl. 16)"],
-        ["pokemon/prinplup.png", "Prinplup", "Level up (lvl. 36)"],
-        ["pokemon/empoleon.png", "Empoleon", "Fully Evolved"],
-        ["pokemon/starly.png", "Starly", "Level up (lvl. 14)"],
-        ["pokemon/staravia.png", "Staravia", "Level up (lvl. 34)"],
-        ["pokemon/staraptor.png", "Staraptor", "Fully Evolved"],
-        ["pokemon/bidoof.png", "Bidoof", "Level up (lvl. 15)"],
-        ["pokemon/bibarel.png", "Bibarel", "Fully Evolved"],
-        ["pokemon/kricketot.png", "Kricketot", "Level up (lvl. 10)"],
-        ["pokemon/kricketune.png", "Kricketune", "Fully Evolved"],
-        ["pokemon/shinx.png", "Shinx", "Level up (lvl. 15)"],
-        ["pokemon/luxio.png", "Luxio", "Level up (lvl. 30)"],
-        ["pokemon/luxray.png", "Luxray", "Fully Evolved"],
-        ["pokemon/abra.png", "Abra", "Level up (lvl. 16)"],
-        ["pokemon/kadabra.png", "Kadabra", "Trade"],
-        ["pokemon/alakazam.png", "Alakazam", "Fully Evolved"],
-        ["pokemon/magikarp.png", "Magikarp", "Level up (lvl. 20)"],
-        ["pokemon/gyarados.png", "Gyarados", "Fully Evolved"]
+        ["pokemon/turtwig.png", "Turtwig", "Level up (lvl. 18)", "#0001", "#0387"],
+        ["pokemon/grotle.png", "Grotle", "Level up (lvl. 32)", "#0002", "#0388"],
+        ["pokemon/torterra.png", "Torterra", "Fully Evolved", "#0003", "#0389"],
+        ["pokemon/chimchar.png", "Chimchar", "Level up (lvl. 14)", "#0004", "#0390"],
+        ["pokemon/monferno.png", "Monferno", "Level up (lvl. 36)", "#0005", "#0391"],
+        ["pokemon/infernape.png", "Infernape", "Fully Evolved", "#0006", "#0392"],
+        ["pokemon/piplup.png", "Piplup", "Level up (lvl. 16)", "#0007", "#0393"],
+        ["pokemon/prinplup.png", "Prinplup", "Level up (lvl. 36)", "#0008", "#0394"],
+        ["pokemon/empoleon.png", "Empoleon", "Fully Evolved", "#0009", "#0395"],
+        ["pokemon/starly.png", "Starly", "Level up (lvl. 14)", "#0010", "#0396"],
+        ["pokemon/staravia.png", "Staravia", "Level up (lvl. 34)", "#0011", "#0397"],
+        ["pokemon/staraptor.png", "Staraptor", "Fully Evolved", "#0012", "#0398"],
+        ["pokemon/bidoof.png", "Bidoof", "Level up (lvl. 15)", "#0013", "#0399"],
+        ["pokemon/bibarel.png", "Bibarel", "Fully Evolved", "#0014", "#0400"],
+        ["pokemon/kricketot.png", "Kricketot", "Level up (lvl. 10)", "#0015", "#0401"],
+        ["pokemon/kricketune.png", "Kricketune", "Fully Evolved", "#0016", "#0402"],
+        ["pokemon/shinx.png", "Shinx", "Level up (lvl. 15)", "#0017", "#0403"],
+        ["pokemon/luxio.png", "Luxio", "Level up (lvl. 30)", "#0018", "#0404"],
+        ["pokemon/luxray.png", "Luxray", "Fully Evolved", "#0019", "#0405"],
+        ["pokemon/abra.png", "Abra", "Level up (lvl. 16)", "#0020", "#0063"],
+        ["pokemon/kadabra.png", "Kadabra", "Trade", "#0021", "#0064"],
+        ["pokemon/alakazam.png", "Alakazam", "Fully Evolved", "#0022", "#0065"],
+        ["pokemon/magikarp.png", "Magikarp", "Level up (lvl. 20)", "#0023", "#0129"],
+        ["pokemon/gyarados.png", "Gyarados", "Fully Evolved", "#0024", "#0130"]
 
 
     ]
@@ -62,11 +62,21 @@ window.onload = function() {
     //Creates the first row of the table (the heading row)
     let trHeading = document.createElement("tr");
     table.appendChild(trHeading);
-    
+
     //Creates the heading table data element for the images column
     let imgHeadingTd = document.createElement("td");
     imgHeadingTd.innerText = "Official Art";
     trHeading.appendChild(imgHeadingTd);
+    
+    //Creates the table data element header for Sinnoh Pokedex Number
+    let sinDexNumHeadingTd = document.createElement("td");
+    sinDexNumHeadingTd.innerText = "S. Dex #";
+    trHeading.appendChild(sinDexNumHeadingTd);
+
+    //Creates the table data element header for National Pokedex Number
+    let natDexNumHeadingTd = document.createElement("td");
+    natDexNumHeadingTd.innerText = "N. Dex #";
+    trHeading.appendChild(natDexNumHeadingTd);
 
     //Creates the heading table data element for the name column
     let nameHeadingTd = document.createElement("td");
@@ -96,10 +106,18 @@ window.onload = function() {
 
         //Branch if the pokemon has one type
         if (pokemonTypes[i][1] == "") {
-
+            
             //Creates img element for pokemon image
             let pokeImg = document.createElement("img");
             pokeImg.src=pokemon[i][0];
+
+            //Creates table data element for sinDexNum
+            let sinDexNum = document.createElement("td");
+            sinDexNum.innerText = pokemon[i][3];
+
+            //Creates table data element for natDexNum
+            let natDexNum = document.createElement("td");
+            natDexNum.innerText = pokemon[i][4];
 
             //Creates table data element for pokemon name
             let nameTd = document.createElement("td");
@@ -122,6 +140,8 @@ window.onload = function() {
 
             //Appends tds to tr, then tr to table
             tr.appendChild(pokeImg);
+            tr.appendChild(sinDexNum);
+            tr.appendChild(natDexNum);
             tr.appendChild(nameTd);
             tr.appendChild(type1Td);
             tr.appendChild(evolveMethodTd);
@@ -185,9 +205,18 @@ window.onload = function() {
 
         //Branch if the pokemon has two types
         else {
+
             //Creates img element for pokemon image
             let pokeImg = document.createElement("img");
             pokeImg.src=pokemon[i][0];
+
+            //Creates table data element for sinDexNum
+            let sinDexNum = document.createElement("td");
+            sinDexNum.innerText = pokemon[i][3];
+
+            //Creates table data element for natDexNum
+            let natDexNum = document.createElement("td");
+            natDexNum.innerText = pokemon[i][4];
 
             //Creates table data element for pokemon name
             let nameTd = document.createElement("td");
@@ -207,6 +236,8 @@ window.onload = function() {
             //Appends tds to tr, then tr to table
             //Note, this branch specifically appends a second td (type2) that the first branch does not
             tr.appendChild(pokeImg);
+            tr.appendChild(sinDexNum);
+            tr.appendChild(natDexNum);
             tr.appendChild(nameTd);
             tr.appendChild(type1Td);
             tr.appendChild(type2Td);
