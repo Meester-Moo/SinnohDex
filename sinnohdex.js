@@ -16,7 +16,17 @@ window.onload = function() {
         ["pokemon/bidoof.png", "Bidoof", "Level up (lvl. 15)"],
         ["pokemon/bibarel.png", "Bibarel", "Fully Evolved"],
         ["pokemon/kricketot.png", "Kricketot", "Level up (lvl. 10)"],
-        ["pokemon/kricketune.png", "Kricketune", "Fully Evolved"]
+        ["pokemon/kricketune.png", "Kricketune", "Fully Evolved"],
+        ["pokemon/shinx.png", "Shinx", "Level up (lvl. 15)"],
+        ["pokemon/luxio.png", "Luxio", "Level up (lvl. 30)"],
+        ["pokemon/luxray.png", "Luxray", "Fully Evolved"],
+        ["pokemon/abra.png", "Abra", "Level up (lvl. 16)"],
+        ["pokemon/kadabra.png", "Kadabra", "Trade"],
+        ["pokemon/alakazam.png", "Alakazam", "Fully Evolved"],
+        ["pokemon/magikarp.png", "Magikarp", "Level up (lvl. 20)"],
+        ["pokemon/gyarados.png", "Gyarados", "Fully Evolved"]
+
+
     ]
 
     let pokemonTypes = [
@@ -36,8 +46,14 @@ window.onload = function() {
         ["Normal", "Water"],
         ["Bug", ""],
         ["Bug", ""],
-
-
+        ["Electric", ""],
+        ["Electric", ""],
+        ["Electric", ""],
+        ["Psychic", ""],
+        ["Psychic", ""],
+        ["Psychic", ""],
+        ["Water", ""],
+        ["Water", "Flying"]
     ]
 
     //Creates table element and associates it with the poketable table in the HTML
@@ -62,14 +78,9 @@ window.onload = function() {
     type1HeadingTd.innerText = "Type";
     type1HeadingTd.setAttribute("colspan", "2");
     trHeading.appendChild(type1HeadingTd);
-    // //Creates the heading table data element for the type2 column
-    // let type2HeadingTd = document.createElement("td");
-    // type2HeadingTd.innerText = "Type 2";
-    // trHeading.appendChild(type2HeadingTd);
 
     //Creates the heading table data element for the Evolution Method column
     let evolveMethodHeadingTd = document.createElement("td");
-    evolveMethodHeadingTd.setAttribute("class", "bold");
     evolveMethodHeadingTd.innerText = "Evolution Method";
     trHeading.appendChild(evolveMethodHeadingTd);
     
@@ -80,7 +91,7 @@ window.onload = function() {
     // 3) Appends the HTML elements into the row for that pokemon
     // 4) Appends the row for that pokemon into the table 
     for (let i = 0; i < pokemon.length; i++) {
-        //Creates Row
+        //Creates Row for the pokemon
         let tr = document.createElement("tr");
 
         //Branch if the pokemon has one type
@@ -97,27 +108,29 @@ window.onload = function() {
             //Creates table data element for pokemon type1
             let type1Td = document.createElement("td");
             type1Td.innerText = pokemonTypes[i][0];
+            //Makes type1 span 2 columns (second column is type2 for entries that have a type2)
             type1Td.setAttribute("colspan", "2");
 
+            //Creates table data element for pokemon Evolution Method
             let evolveMethodTd = document.createElement("td");
             evolveMethodTd.innerText = pokemon[i][2];
-            evolveMethodTd.setAttribute("colspan", "2");
-            
-            // var type1Object = document.createElement('td')
-            
-            // Object.assign()
 
+            //Can I use an object?
+            // var type1Object = document.createElement('td')
+            // Object.assign()
             // document.body.appendChild(newObject) 
 
-            
+            //Appends tds to tr, then tr to table
             tr.appendChild(pokeImg);
             tr.appendChild(nameTd);
             tr.appendChild(type1Td);
             tr.appendChild(evolveMethodTd);
             table.appendChild(tr);
-            console.log("One type branch");
+
+            //How to know which branch entered for the pokemon
+            console.log("One type branch for " + pokemon[i][1]);
             
-            // tests for type to apply CSS coloring
+            //tests for type to apply CSS to the type
             switch(pokemonTypes[i][0]) {
                 case "Grass":
                     type1Td.setAttribute("class", "typeGrass");
@@ -146,10 +159,22 @@ window.onload = function() {
                 case "Normal":
                     type1Td.setAttribute("class", "typeNormal");
                     break;
+
+                case "Flying":
+                    type1Td.setAttribute("class", "typeFlying");
+                    break;
                 
                 case "Bug":
                     type1Td.setAttribute("class", "typeBug");
                     break;
+
+                case "Electric":
+                    type1Td.setAttribute("class", "typeElectric");
+                    break;
+                  
+                case "Psychic":
+                    type1Td.setAttribute("class", "typePsychic");
+                    break;                    
 
                 default:
                   // code block
@@ -157,30 +182,41 @@ window.onload = function() {
            
 
         }
+
         //Branch if the pokemon has two types
         else {
+            //Creates img element for pokemon image
             let pokeImg = document.createElement("img");
             pokeImg.src=pokemon[i][0];
-            //Creates table data element for pokemon type1
+
+            //Creates table data element for pokemon name
             let nameTd = document.createElement("td");
             nameTd.innerText = pokemon[i][1];
+            //Creates table data element for pokemon type1
             let type1Td = document.createElement("td");
             type1Td.innerText = pokemonTypes[i][0];
+
             //Creates table data element for pokemon type2
             let type2Td = document.createElement("td");
             type2Td.innerText= pokemonTypes[i][1];
-            //Creates table data element for pokemon level
+
+            //Creates table data element for pokemon Evolution Method
             let evolveMethodTd = document.createElement("td");
             evolveMethodTd.innerText = pokemon[i][2];
+
+            //Appends tds to tr, then tr to table
+            //Note, this branch specifically appends a second td (type2) that the first branch does not
             tr.appendChild(pokeImg);
             tr.appendChild(nameTd);
             tr.appendChild(type1Td);
             tr.appendChild(type2Td);
             tr.appendChild(evolveMethodTd);
             table.appendChild(tr);
-            console.log("Two types branch");
-            //tests for type to apply CSS coloring
 
+            //How to know which branch entered for the pokemon
+            console.log("Two type branch for " + pokemon[i][1]);
+
+            //tests for type to apply CSS to the first type
             switch(pokemonTypes[i][0]) {
                 case "Grass":
                     type1Td.setAttribute("class", "typeGrass");
@@ -210,13 +246,27 @@ window.onload = function() {
                     type1Td.setAttribute("class", "typeNormal");
                     break;
 
+                case "Flying":
+                    type1Td.setAttribute("class", "typeFlying");
+                    break;
+
                 case "Bug":
                     type1Td.setAttribute("class", "typeBug");
                     break;
 
+                case "Electric":
+                    type1Td.setAttribute("class", "typeElectric");
+                    break;
+
+                case "Psychic":
+                    type1Td.setAttribute("class", "typePsychic");
+                    break; 
+
                 default:
                   // code block
               } 
+
+            //tests for type to apply CSS to the second type   
             switch(pokemonTypes[i][1]) {
                 case "Grass":
                     type2Td.setAttribute("class", "typeGrass");
@@ -240,35 +290,36 @@ window.onload = function() {
 
                 case "Steel":
                     type2Td.setAttribute("class", "typeSteel");
-                break;
+                    break;
 
                 case "Normal":
                     type2Td.setAttribute("class", "typeNormal");
+                    break;
+
+                case "Flying":
+                    type2Td.setAttribute("class", "typeFlying");
                     break;
 
                 case "Bug":
                     type2Td.setAttribute("class", "typeBug");
                     break;
 
+                case "Electric":
+                    type12d.setAttribute("class", "typeElectric");
+                    break;
+
+                case "Psychic":
+                    type2Td.setAttribute("class", "typePsychic");
+                    break; 
+
                 default:
                   // code block
               } 
 
-
         }
-
-
-
-
-
-        // tr.appendChild(imgTd);
 
     }
 
 }
 
-
-//TODO: Figure out how to add CSS to specific types
 //TODO: Add pokedex entry numbers
-//TODO: Figure out how to add colspan to entries that only have one type
-//TODO: Clean up TODO list

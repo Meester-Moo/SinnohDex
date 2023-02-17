@@ -26,7 +26,19 @@
     color: dimgray;
     text-align: center;
 }
+.typeFlying {
+    color:cornflowerblue;
+    text-align: center;
+}
 .typeBug {
     color:yellowgreen;
     text-align: center;
+}
+.typeElectric {
+    color: gold;
+    text-align: center;
+}
+.typePsychic {
+    color: hotpink;
+    text-align: center;   
 }
