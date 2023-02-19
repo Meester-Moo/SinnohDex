@@ -39,7 +39,12 @@ window.onload = function() {
         ["pokemon/cranidos.png", "Cranidos", "Level up (lvl. 30)", "#0036", "#0408"],
         ["pokemon/rampardos.png", "Rampardos", "Fully Evolved", "#0037", "#0409"],
         ["pokemon/shieldon.png", "Shieldon", "Level up (lvl. 30)", "#0038", "#0410"],
-        ["pokemon/Bastiodon.png", "Bastiodon", "Fully Evolved", "#0039", "#0411"],
+        ["pokemon/bastiodon.png", "Bastiodon", "Fully Evolved", "#0039", "#0411"],
+        ["pokemon/machop.png", "Machop", "Level up (lvl. 28)", "#0040", "#0066"],
+        ["pokemon/machoke.png", "Machoke", "Trade", "#0041", "#0067"],
+        ["pokemon/machamp.png", "Machamp", "Fully Evolved", "#0042", "#0068"],
+        ["pokemon/psyduck.png", "Psyduck", "Level up (lvl. 33)", "#0043", "#0054"],
+        ["pokemon/golduck.png", "Golduck", "Fully Evolved", "#0044", "#0055"],
 
     ]
 
@@ -83,6 +88,11 @@ window.onload = function() {
         ["Rock", ""],
         ["Rock", "Steel"],
         ["Rock", "Steel"],
+        ["Fighting", ""],
+        ["Fighting", ""],
+        ["Fighting", ""],
+        ["Water", ""],
+        ["Water", "Psychic"],
 
     ]
 
@@ -410,6 +420,8 @@ window.onload = function() {
 //TODO Add rest of Pokemon for Diamond, Pearl and Platinum
 //TODO Distinguish Pokemon only found in Platinum
 //TODO Use type plates from actual game instead of CSS font?
+//TODO Fix typo in commit message a1ce6a8
+    //Fix earliest commits starting with uppercase
 
 //**Always do spelling check and make sure everything is uniform**
 
