@@ -1,9 +1,9 @@
 .typeGrass {
-    color: green;
+    color: forestgreen;
     text-align: center;
 }
 .typeGround {
-    color: brown;
+    color: rgb(219, 146, 72);
     text-align: center;
 }
 .typeFire {
@@ -11,11 +11,11 @@
     text-align: center;
 }
 .typeWater {
-    color: blue;
+    color: dodgerblue;
     text-align: center;
 }
 .typeFighting {
-    color: orange;
+    color: rgb(243, 120, 6);
     text-align: center;
 }
 .typeSteel {
@@ -23,11 +23,11 @@
     text-align: center;
 }
 .typeNormal {
-    color: dimgray;
+    color: mintcream;
     text-align: center;
 }
 .typeFlying {
-    color:cornflowerblue;
+    color: lightskyblue;
     text-align: center;
 }
 .typeBug {
@@ -41,4 +41,12 @@
 .typePsychic {
     color: hotpink;
     text-align: center;   
+}
+.typePoison {
+    color: blueviolet;
+    text-align: center;
+}
+.typeRock {
+    color: rgb(100, 64, 17);
+    text-align: center;
 }

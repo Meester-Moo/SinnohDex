@@ -24,8 +24,22 @@ window.onload = function() {
         ["pokemon/kadabra.png", "Kadabra", "Trade", "#0021", "#0064"],
         ["pokemon/alakazam.png", "Alakazam", "Fully Evolved", "#0022", "#0065"],
         ["pokemon/magikarp.png", "Magikarp", "Level up (lvl. 20)", "#0023", "#0129"],
-        ["pokemon/gyarados.png", "Gyarados", "Fully Evolved", "#0024", "#0130"]
-
+        ["pokemon/gyarados.png", "Gyarados", "Fully Evolved", "#0024", "#0130"],
+        ["pokemon/budew.png", "Budew", "Level up (high friendship, daytime)", "#0025", "#0406"],
+        ["pokemon/roselia.png", "Roselia", "Shiny Stone", "#0026", "#0315"],
+        ["pokemon/roserade.png", "Roserade", "Fully Evolved", "#0027", "#0407"],
+        ["pokemon/zubat.png", "Zubat", "Level up (lvl. 22)", "#0028", "#0041"],
+        ["pokemon/golbat.png", "Golbat", "Level up (high friendship)", "#0029", "#0042"],
+        ["pokemon/crobat.png", "Crobat", "Fully Evolved", "#0030", "#0169"],
+        ["pokemon/geodude.png", "Geodude", "Level up (lvl. 25)", "#0031", "#0074"],
+        ["pokemon/graveler.png", "Graveler", "Trade", "#0032", "#0075"],
+        ["pokemon/golem.png", "Golem", "Fully Evolved", "#0033", "#0076"],
+        ["pokemon/onix.png", "Onix", "Trade while holding Metal Coat", "#0034", "#0095"],
+        ["pokemon/steelix.png", "Steelix", "Fully Evolved", "#0035", "#0208"],
+        ["pokemon/cranidos.png", "Cranidos", "Level up (lvl. 30)", "#0036", "#0408"],
+        ["pokemon/rampardos.png", "Rampardos", "Fully Evolved", "#0037", "#0409"],
+        ["pokemon/shieldon.png", "Shieldon", "Level up (lvl. 30)", "#0038", "#0410"],
+        ["pokemon/Bastiodon.png", "Bastiodon", "Fully Evolved", "#0039", "#0411"],
 
     ]
 
@@ -53,7 +67,23 @@ window.onload = function() {
         ["Psychic", ""],
         ["Psychic", ""],
         ["Water", ""],
-        ["Water", "Flying"]
+        ["Water", "Flying"],
+        ["Grass", "Poison"],
+        ["Grass", "Poison"],
+        ["Grass", "Poison"],
+        ["Poison", "Flying"],
+        ["Poison", "Flying"],
+        ["Poison", "Flying"],
+        ["Rock", "Ground"],
+        ["Rock", "Ground"],
+        ["Rock", "Ground"],
+        ["Rock", "Ground"],
+        ["Steel", "Ground"],
+        ["Rock", ""],
+        ["Rock", ""],
+        ["Rock", "Steel"],
+        ["Rock", "Steel"],
+
     ]
 
     //Creates table element and associates it with the poketable table in the HTML
@@ -194,7 +224,15 @@ window.onload = function() {
                   
                 case "Psychic":
                     type1Td.setAttribute("class", "typePsychic");
-                    break;                    
+                    break;
+
+                case "Poison":
+                    type1Td.setAttribute("class", "typePoison");
+                    break;
+
+                case "Rock":
+                    type1Td.setAttribute("class", "typeRock");
+                    break;             
 
                 default:
                   // code block
@@ -291,6 +329,14 @@ window.onload = function() {
 
                 case "Psychic":
                     type1Td.setAttribute("class", "typePsychic");
+                    break;
+
+                case "Poison":
+                    type1Td.setAttribute("class", "typePoison");
+                    break;
+
+                case "Rock":
+                    type1Td.setAttribute("class", "typeRock");
                     break; 
 
                 default:
@@ -343,6 +389,14 @@ window.onload = function() {
                     type2Td.setAttribute("class", "typePsychic");
                     break; 
 
+                case "Poison":
+                    type2Td.setAttribute("class", "typePoison");
+                    break; 
+
+                case "Rock":
+                    type2Td.setAttribute("class", "typeRock");
+                    break;                     
+
                 default:
                   // code block
               } 
@@ -353,4 +407,14 @@ window.onload = function() {
 
 }
 
-//TODO: Add pokedex entry numbers
+//TODO Add rest of Pokemon for Diamond, Pearl and Platinum
+//TODO Distinguish Pokemon only found in Platinum
+//TODO Use type plates from actual game instead of CSS font?
+
+//**Always do spelling check and make sure everything is uniform**
+
+//Columns to add:
+
+//TODO Add stats columns
+//TODO Add Abilities column
+//TODO Add where to obtain (might be too big, might have to possiblydecrease size of elements(?))
