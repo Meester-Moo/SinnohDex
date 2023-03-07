@@ -26,3 +26,7 @@ img {
 .bold {
     font-weight: bold;
 }
+footer {
+    font-size: 20px;
+    color: silver;
+}

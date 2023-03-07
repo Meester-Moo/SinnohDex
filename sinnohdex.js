@@ -45,6 +45,28 @@ window.onload = function() {
         ["pokemon/machamp.png", "Machamp", "Fully Evolved", "#0042", "#0068"],
         ["pokemon/psyduck.png", "Psyduck", "Level up (lvl. 33)", "#0043", "#0054"],
         ["pokemon/golduck.png", "Golduck", "Fully Evolved", "#0044", "#0055"],
+        ["pokemon/burmy_plant_cloak.png", "Burmy (Plant Cloak)", "Level up (lvl. 20). Male - Mothim | Female - Wormadam", "#0045", "#0412"],
+        ["pokemon/burmy_sandy_cloak.png", "Burmy (Sandy Cloak)", "Level up (lvl. 20). Male - Mothim | Female - Wormadam", "#0045", "#0412G"],
+        ["pokemon/burmy_trash_cloak.png", "Burmy (Trash Cloak)", "Level up (lvl. 20). Male - Mothim | Female - Wormadam", "#0045", "#0412S"],
+        ["pokemon/wormadam_plant_cloak.png", "Wormadam (Plant Cloak)", "Fully Evolved", "#0046", "#0413"],
+        ["pokemon/wormadam_sandy_cloak.png", "Wormadam (Sandy Cloak)", "Fully Evolved", "#0046", "#0413G"],
+        ["pokemon/wormadam_trash_cloak.png", "Wormadam (Trash Cloak)", "Fully Evolved", "#0046", "#0413S"],
+        ["pokemon/mothim.png", "Mothim", "Fully Evolved", "#0047", "#0414"],
+        ["pokemon/wurmple.png", "Wurmple", "Level up (lvl. 7). Evolves into either Silcoon or Cascoon at random", "#0048", "#0265"],
+        ["pokemon/silcoon.png", "Silcoon", "Level up (lvl. 10)", "#0049", "#0266"],
+        ["pokemon/beautifly.png", "Beautifly", "Fully Evolved (from Silcoon)", "#0050", "#0267"],
+        ["pokemon/cascoon.png", "Cascoon", "Level up (lvl. 10)", "#0051", "#0268"],
+        ["pokemon/dustox.png", "Dustox", "Fully Evolved (from Cascoon)", "#0052", "#0269"],
+        ["pokemon/combee.png", "Combee", "Level up (lvl. 21) (females only)", "#0053", "#0415"],
+        ["pokemon/vespiquen.png", "Vespiquen", "Fully Evolved", "#0054", "#0416"],
+        ["pokemon/pachirisu.png", "Pachirisu", "Fully Evolved", "#0055", "#0417"],
+        ["pokemon/buizel.png", "Buizel", "Level up (lvl. 26)", "#0056", "#0418"],
+        ["pokemon/floatzel.png", "Floatzel", "Fully Evolved", "#0057", "#0419"],
+        ["pokemon/cherubi.png", "Cherubi", "Level up (lvl. 25)", "#0058", "#0420"],
+        ["pokemon/cherrim.png", "Cherrim", "Fully Evolved", "#0059", "#0421"],
+        ["pokemon/shellos.png", "Shellos (West Coast and East Coast)", "Level up (lvl. 30)", "#0060", "#0422"],
+        ["pokemon/gastrodon.png", "Gastrodon (West Coast and East Coast)", "Fully Evolved", "#0061", "#0423"],
+        ["pokemon/heracross.png", "Heracross", "Fully Evolved", "#0062", "#0214"],
 
     ]
 
@@ -93,7 +115,29 @@ window.onload = function() {
         ["Fighting", ""],
         ["Water", ""],
         ["Water", "Psychic"],
-
+        ["Bug", ""],
+        ["Bug", ""],
+        ["Bug", ""],
+        ["Bug", "Grass"],
+        ["Bug", "Ground"],
+        ["Bug", "Steel"],
+        ["Bug", "Flying"],
+        ["Bug", ""],
+        ["Bug", ""],
+        ["Bug", "Flying"],
+        ["Bug", ""],
+        ["Bug", "Poison"],
+        ["Bug", "Flying"],
+        ["Bug", "Flying"],
+        ["Electric", ""],
+        ["Water", ""],
+        ["Water", ""],
+        ["Grass", ""],
+        ["Grass", ""],
+        ["Water", "Ground"],
+        ["Water", "Ground"],
+        ["Bug", "Fighting"],
+        
     ]
 
     //Creates table element and associates it with the poketable table in the HTML
@@ -419,6 +463,7 @@ window.onload = function() {
 
 //TODO Add rest of Pokemon for Diamond, Pearl and Platinum
 //TODO Distinguish Pokemon only found in Platinum
+//TODO Change default font family
 //TODO Use type plates from actual game instead of CSS font?
 //TODO Fix typo in commit message a1ce6a8
     //Fix earliest commits starting with uppercase
